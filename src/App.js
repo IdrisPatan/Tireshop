@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import {BasicModal} from './BasicModal'
+import background from './background.png'
 import {
     Button,
     Container,
@@ -10,7 +11,7 @@ import {
     Icon,
     Image,
     List,
-    Menu, Modal,
+    Menu,
     Responsive,
     Segment,
     Visibility,
@@ -85,6 +86,7 @@ class App extends Component {
                         style={{ minHeight: 700, padding: '1em 0em', backgroundColor: '#003300'}}
                         vertical
                     >
+                        <image> src={background}</image>
                         <Menu
                             fixed={fixed ? 'top' : null}
                             inverted={!fixed}
@@ -126,7 +128,8 @@ class App extends Component {
                                     </p>
                                 </Grid.Column>
                                 <Grid.Column floated='right' width={6}>
-                                    <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+                                    {/*<Image bordered rounded size='large' src='/images/wireframe/white-image.png' />*/}
+                                    <Image bordered rounded size='large' src={background} />
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
@@ -179,7 +182,7 @@ class App extends Component {
                                 horizontal
                                 style={{ margin: '3em 0em', textTransform: 'uppercase' }}
                             >
-                                <a href='#'>Case Studies</a>
+                                <a >Case Studies</a>
                             </Divider>
 
                             <Header as='h3' style={{ fontSize: '2em' }}>
